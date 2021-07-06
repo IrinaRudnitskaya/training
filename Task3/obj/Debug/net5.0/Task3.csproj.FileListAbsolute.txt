@@ -1,0 +1,16 @@
+C:\Users\Irina\Training\Rudnitskaya. Training\Task3\bin\Debug\net5.0\Task3.exe
+C:\Users\Irina\Training\Rudnitskaya. Training\Task3\bin\Debug\net5.0\Task3.deps.json
+C:\Users\Irina\Training\Rudnitskaya. Training\Task3\bin\Debug\net5.0\Task3.runtimeconfig.json
+C:\Users\Irina\Training\Rudnitskaya. Training\Task3\bin\Debug\net5.0\Task3.runtimeconfig.dev.json
+C:\Users\Irina\Training\Rudnitskaya. Training\Task3\bin\Debug\net5.0\Task3.dll
+C:\Users\Irina\Training\Rudnitskaya. Training\Task3\bin\Debug\net5.0\ref\Task3.dll
+C:\Users\Irina\Training\Rudnitskaya. Training\Task3\bin\Debug\net5.0\Task3.pdb
+C:\Users\Irina\Training\Rudnitskaya. Training\Task3\obj\Debug\net5.0\Task3.csproj.AssemblyReference.cache
+C:\Users\Irina\Training\Rudnitskaya. Training\Task3\obj\Debug\net5.0\Task3.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Irina\Training\Rudnitskaya. Training\Task3\obj\Debug\net5.0\Task3.AssemblyInfoInputs.cache
+C:\Users\Irina\Training\Rudnitskaya. Training\Task3\obj\Debug\net5.0\Task3.AssemblyInfo.cs
+C:\Users\Irina\Training\Rudnitskaya. Training\Task3\obj\Debug\net5.0\Task3.csproj.CoreCompileInputs.cache
+C:\Users\Irina\Training\Rudnitskaya. Training\Task3\obj\Debug\net5.0\Task3.dll
+C:\Users\Irina\Training\Rudnitskaya. Training\Task3\obj\Debug\net5.0\ref\Task3.dll
+C:\Users\Irina\Training\Rudnitskaya. Training\Task3\obj\Debug\net5.0\Task3.pdb
+C:\Users\Irina\Training\Rudnitskaya. Training\Task3\obj\Debug\net5.0\Task3.genruntimeconfig.cache
