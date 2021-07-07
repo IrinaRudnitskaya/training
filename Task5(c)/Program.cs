@@ -24,7 +24,7 @@ namespace Task5_c_
                             {
 
                                 if (b == i1 || b == i2) Console.Write("*");
-                                
+                                else Console.Write(" ");
                             }
                             Console.Write("\n");
                             i2++;
