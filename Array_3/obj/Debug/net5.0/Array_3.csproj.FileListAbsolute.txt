@@ -1,0 +1,16 @@
+C:\Users\Irina\Training\Rudnitskaya. Training\Array_3\bin\Debug\net5.0\Array_3.exe
+C:\Users\Irina\Training\Rudnitskaya. Training\Array_3\bin\Debug\net5.0\Array_3.deps.json
+C:\Users\Irina\Training\Rudnitskaya. Training\Array_3\bin\Debug\net5.0\Array_3.runtimeconfig.json
+C:\Users\Irina\Training\Rudnitskaya. Training\Array_3\bin\Debug\net5.0\Array_3.runtimeconfig.dev.json
+C:\Users\Irina\Training\Rudnitskaya. Training\Array_3\bin\Debug\net5.0\Array_3.dll
+C:\Users\Irina\Training\Rudnitskaya. Training\Array_3\bin\Debug\net5.0\ref\Array_3.dll
+C:\Users\Irina\Training\Rudnitskaya. Training\Array_3\bin\Debug\net5.0\Array_3.pdb
+C:\Users\Irina\Training\Rudnitskaya. Training\Array_3\obj\Debug\net5.0\Array_3.csproj.AssemblyReference.cache
+C:\Users\Irina\Training\Rudnitskaya. Training\Array_3\obj\Debug\net5.0\Array_3.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Irina\Training\Rudnitskaya. Training\Array_3\obj\Debug\net5.0\Array_3.AssemblyInfoInputs.cache
+C:\Users\Irina\Training\Rudnitskaya. Training\Array_3\obj\Debug\net5.0\Array_3.AssemblyInfo.cs
+C:\Users\Irina\Training\Rudnitskaya. Training\Array_3\obj\Debug\net5.0\Array_3.csproj.CoreCompileInputs.cache
+C:\Users\Irina\Training\Rudnitskaya. Training\Array_3\obj\Debug\net5.0\Array_3.dll
+C:\Users\Irina\Training\Rudnitskaya. Training\Array_3\obj\Debug\net5.0\ref\Array_3.dll
+C:\Users\Irina\Training\Rudnitskaya. Training\Array_3\obj\Debug\net5.0\Array_3.pdb
+C:\Users\Irina\Training\Rudnitskaya. Training\Array_3\obj\Debug\net5.0\Array_3.genruntimeconfig.cache

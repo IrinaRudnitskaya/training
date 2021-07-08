@@ -8,21 +8,14 @@ namespace Task8
         {
 
             int sum = 6;
-            int k;
-            for (int i = 1; i<=46;  i++)
+            int k=10;
+            for (int i = 6; i < k, i++)
             {
-                if (i % 4 == 0)
-                {
-                    for (k = 0; k<=10;k++)
-                    {
-                        sum += i;
-                    }
-                }
-                else continue;
-                Console.WriteLine(k);
 
             }
-            Console.WriteLine(sum);
+
+            }
+                Console.WriteLine(sum);
         }
     }
 }
