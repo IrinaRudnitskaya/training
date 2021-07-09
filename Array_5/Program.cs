@@ -1,8 +1,7 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Linq;
 using System.IO;
-using System.;
+using System.Text;
 
 namespace Array_4
 {
@@ -10,15 +9,21 @@ namespace Array_4
     {
         static void Main(string[] args)
         {
-            using (FileStream fstream = File.OpenRead($"{path}\note.txt"))
+            using (FileStream fstream = File.OpenRead(@"C:\Users\Irina\Documents\array.txt"))
             {
-                // преобразуем строку в байты
                 byte[] array = new byte[fstream.Length];
-                // считываем данные
+
                 fstream.Read(array, 0, array.Length);
-                // декодируем байты в строку
-                string textFromFile = System.Text.Encoding.Default.GetString(array);
-                int array_1 = new int[int.Parse, textFromFile];
+
+                string textFromFile = Encoding.Default.GetString(array)
+                    .Replace("\r", string.Empty)
+                    .Replace("\n", string.Empty)
+                    .Trim();
+
+                var arrayFromString = textFromFile.Split(' ')
+                    .Select(x => Convert.ToInt32(x))
+                    .ToArray();
+
                 Console.WriteLine($"Текст из файла: {textFromFile}");
             }
 
