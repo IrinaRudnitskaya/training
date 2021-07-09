@@ -15,14 +15,18 @@ namespace Array_3
 
             Console.Write("Array: ");
             for (var i = 0; i < array.Length; i++)
+            {
                 Console.Write("{0}\t", array[i]);
-            Console.WriteLine();
+                Console.WriteLine();
+            }
+
 
             Console.Write("Min = ");
             Console.WriteLine(array.Min());
 
             Console.Write("Max = ");
             Console.WriteLine(array.Max());
+
 
             var odd = array[0];
 
