@@ -1,0 +1,15 @@
+C:\Users\Irina\Training\Rudnitskaya. Training\Strings_6\bin\Debug\net5.0\Strings_6.exe
+C:\Users\Irina\Training\Rudnitskaya. Training\Strings_6\bin\Debug\net5.0\Strings_6.deps.json
+C:\Users\Irina\Training\Rudnitskaya. Training\Strings_6\bin\Debug\net5.0\Strings_6.runtimeconfig.json
+C:\Users\Irina\Training\Rudnitskaya. Training\Strings_6\bin\Debug\net5.0\Strings_6.runtimeconfig.dev.json
+C:\Users\Irina\Training\Rudnitskaya. Training\Strings_6\bin\Debug\net5.0\Strings_6.dll
+C:\Users\Irina\Training\Rudnitskaya. Training\Strings_6\bin\Debug\net5.0\ref\Strings_6.dll
+C:\Users\Irina\Training\Rudnitskaya. Training\Strings_6\bin\Debug\net5.0\Strings_6.pdb
+C:\Users\Irina\Training\Rudnitskaya. Training\Strings_6\obj\Debug\net5.0\Strings_6.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Irina\Training\Rudnitskaya. Training\Strings_6\obj\Debug\net5.0\Strings_6.AssemblyInfoInputs.cache
+C:\Users\Irina\Training\Rudnitskaya. Training\Strings_6\obj\Debug\net5.0\Strings_6.AssemblyInfo.cs
+C:\Users\Irina\Training\Rudnitskaya. Training\Strings_6\obj\Debug\net5.0\Strings_6.csproj.CoreCompileInputs.cache
+C:\Users\Irina\Training\Rudnitskaya. Training\Strings_6\obj\Debug\net5.0\Strings_6.dll
+C:\Users\Irina\Training\Rudnitskaya. Training\Strings_6\obj\Debug\net5.0\ref\Strings_6.dll
+C:\Users\Irina\Training\Rudnitskaya. Training\Strings_6\obj\Debug\net5.0\Strings_6.pdb
+C:\Users\Irina\Training\Rudnitskaya. Training\Strings_6\obj\Debug\net5.0\Strings_6.genruntimeconfig.cache
