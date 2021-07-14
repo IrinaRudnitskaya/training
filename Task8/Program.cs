@@ -7,15 +7,20 @@ namespace Task8
         static void Main(string[] args)
         {
 
+            int x = 6;
             int sum = 6;
-            int k=10;
-            for (int i = 6; i < k, i++)
+            Console.WriteLine(x);
+            for (int i = 1; i < 10; i++)
             {
-
+                x += 4;
+                sum += x;
+                
+                Console.WriteLine(x);
             }
 
-            }
-                Console.WriteLine(sum);
+            Console.WriteLine("Sum of the numbers = ", sum) ;
+
+
         }
     }
 }
