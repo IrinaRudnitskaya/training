@@ -96,31 +96,39 @@ namespace Trainig
 
             /////
             ///
-            int side_1 = 0;
-            int side_2 = 0;
-            Rectangle(side_1, side_2);
+            //int side_1 = 0;
+            //int side_2 = 0;
+            //Rectangle(side_1, side_2);
 
-            int threeangle_side = 0;
-            Threeangle_1(threeangle_side);
+            //int threeangle_side = 0;
+            //Threeangle_1(threeangle_side);
 
-            int Threeangle_side = 0;
-            Threeangle_2(Threeangle_side);
+            //int Threeangle_side = 0;
+            //Threeangle_2(Threeangle_side);
 
-            int Threeangle_Side = 0;
-            Threeangle_3(Threeangle_Side);
+            //int Threeangle_Side = 0;
+            //Threeangle_3(Threeangle_Side);
 
-            int sum = 6;
-            NumberOfTerms(sum);
+            //int sum = 6;
+            //NumberOfTerms(sum);
 
-            int a = 6;
-            int sumOfTenTerms = 6;
-            SumOfTenTerms(a, sumOfTenTerms);
+            //int a = 6;
+            //int sumOfTenTerms = 6;
+            //SumOfTenTerms(a, sumOfTenTerms);
 
-            int b = 1;
-            int sumOfElevenTerms = 1;
-            SumOfElevenTerms(b, sumOfElevenTerms);
+            //int b = 1;
+            //int sumOfElevenTerms = 1;
+            //SumOfElevenTerms(b, sumOfElevenTerms);
 
+            //int x = 6;
+            //int sumMoreThan100 = 6;
+            //int number_1 = 0;
+            //SumMoreThan100(x, sumMoreThan100, number_1);
 
+            int y = 6;
+            int sumLessThan100 = 6;
+            int number_2 = 0;
+            SumLessThan100(y, sumLessThan100, number_2);
 
 
 
@@ -326,7 +334,49 @@ namespace Trainig
 
             Console.WriteLine("Sum of the numbers = " + sumOfElevenTerms);
         }
+        static void SumMoreThan100(int x, int sumMoreThan100, int number_1)
+        {
+            Console.WriteLine(x);
 
+
+            for (int i = 1; i < 10; i++)
+            {
+                x += 4;
+                sumMoreThan100 += x;
+                Console.WriteLine(x);
+                if (sumMoreThan100 > 100)
+                    break;
+                number_1 = i + 1;
+            }
+
+            Console.Write("Количество слагаемых = ");
+            Console.WriteLine(number_1);
+            Console.Write("Сумма = ");
+            Console.WriteLine(sumMoreThan100);
+        }
+        static void SumLessThan100(int y, int sumLessThan100, int number_2)
+        {
+            Console.WriteLine(y);
+
+            for (int i = 1; i < 10; i++)
+            {
+                y += 4;
+                sumLessThan100 += y;
+                Console.WriteLine(y);
+                number_2 = i + 1;
+                if (sumLessThan100 > 100)
+                {
+                    sumLessThan100 -= y;
+                    number_2 -= 1;
+                    break;
+                }
+            }
+
+            Console.Write("Количество слагаемых = ");
+            Console.WriteLine(number_2);
+            Console.Write("Сумма = ");
+            Console.WriteLine(sumLessThan100);
+        }
 
 
 
