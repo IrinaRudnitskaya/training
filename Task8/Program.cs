@@ -18,7 +18,7 @@ namespace Task8
                 Console.WriteLine(x);
             }
 
-            Console.WriteLine("Sum of the numbers = ", sum) ;
+            Console.WriteLine("Sum of the numbers = " + sum) ;
 
 
         }

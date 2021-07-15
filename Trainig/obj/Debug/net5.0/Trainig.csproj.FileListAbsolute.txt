@@ -1,0 +1,16 @@
+C:\Users\Irina\Training\Rudnitskaya. Training\Trainig\bin\Debug\net5.0\Trainig.exe
+C:\Users\Irina\Training\Rudnitskaya. Training\Trainig\bin\Debug\net5.0\Trainig.deps.json
+C:\Users\Irina\Training\Rudnitskaya. Training\Trainig\bin\Debug\net5.0\Trainig.runtimeconfig.json
+C:\Users\Irina\Training\Rudnitskaya. Training\Trainig\bin\Debug\net5.0\Trainig.runtimeconfig.dev.json
+C:\Users\Irina\Training\Rudnitskaya. Training\Trainig\bin\Debug\net5.0\Trainig.dll
+C:\Users\Irina\Training\Rudnitskaya. Training\Trainig\bin\Debug\net5.0\ref\Trainig.dll
+C:\Users\Irina\Training\Rudnitskaya. Training\Trainig\bin\Debug\net5.0\Trainig.pdb
+C:\Users\Irina\Training\Rudnitskaya. Training\Trainig\obj\Debug\net5.0\Trainig.csproj.AssemblyReference.cache
+C:\Users\Irina\Training\Rudnitskaya. Training\Trainig\obj\Debug\net5.0\Trainig.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Irina\Training\Rudnitskaya. Training\Trainig\obj\Debug\net5.0\Trainig.AssemblyInfoInputs.cache
+C:\Users\Irina\Training\Rudnitskaya. Training\Trainig\obj\Debug\net5.0\Trainig.AssemblyInfo.cs
+C:\Users\Irina\Training\Rudnitskaya. Training\Trainig\obj\Debug\net5.0\Trainig.csproj.CoreCompileInputs.cache
+C:\Users\Irina\Training\Rudnitskaya. Training\Trainig\obj\Debug\net5.0\Trainig.dll
+C:\Users\Irina\Training\Rudnitskaya. Training\Trainig\obj\Debug\net5.0\ref\Trainig.dll
+C:\Users\Irina\Training\Rudnitskaya. Training\Trainig\obj\Debug\net5.0\Trainig.pdb
+C:\Users\Irina\Training\Rudnitskaya. Training\Trainig\obj\Debug\net5.0\Trainig.genruntimeconfig.cache

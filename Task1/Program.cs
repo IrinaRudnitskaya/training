@@ -31,9 +31,9 @@ namespace Task1
                     return;
                 }
 
-                catch (Exception error)
+                catch (Exception)
                 {
-                    Console.WriteLine(error.Message);
+                    Console.WriteLine("You can't enter symbols. Please, enter the number.");
                 }
             }
            
