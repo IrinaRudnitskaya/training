@@ -82,7 +82,7 @@ namespace Trainig
 
             //MaxNumberFromArray();
             //ValidationSortArray();                
-            ElementsOfArray();
+            //ElementsOfArray();
             //MergeTwoArray();                
             //SortArrayToFile();
             //SortReserveArrayToFile();
