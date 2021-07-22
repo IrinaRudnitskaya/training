@@ -15,7 +15,7 @@ namespace Trainig
                 {
                     return true;
                 }
-                Console.WriteLine("Это не целое число. Попробуйте еще раз");
+                Console.WriteLine("Это не целое число. Попробуйте еще раз.");
                 return false;
             }
         }
@@ -59,457 +59,449 @@ namespace Trainig
 
             }
         }
-        class Program
+    }
+    class Program
+    {
+        static void Main(string[] args)
         {
-            static void Main(string[] args)
+            //Task1();
+            //Task2();
+            //Task3();
+            //Task4();
+            //Rectangle();
+            //Threeangle_1();
+            //Threeangle_2();
+            //Rhombus();
+            //Task6();
+            //Task7();
+            //Task8();
+            //Task9();
+            //Task10();
+            //Task11();
+            //Task12();
+
+            //MaxNumberFromArray();
+            //ValidationSortArray();                
+            ElementsOfArray();
+            //MergeTwoArray();                
+            //SortArrayToFile();
+            //SortReserveArrayToFile();
+
+
+            //ShiftArray();
+
+            //FormatString();
+            //ArrayString();
+            //ComparisonString();
+            //StringIndexO();
+            //StringIndexY();
+            //StringInsert();
+            //StringReplace();
+            //StringDelete();
+            //StringRegister();
+            //StringSplit();
+        }
+
+        static void Task1()
+        {
+
+            while (true)
             {
-                //Task1();
-                //Task2();
-                //Task3();
-                //Task4();
-                //Rectangle();
-                //Threeangle_1();
-                //Threeangle_2();
-                //Rhombus();
-                //Task6();
-                //Task7();
-                //Task8();
-                //Task9();
-                //Task10();
-                //Task11();
-                //Task12();
 
-                //MaxNumberFromArray();
-                //ValidationSortArray();                
-                //ElementsOfArray();                
-                //MergeTwoArray();                
-                //SortArrayToFile();
-                //SortReserveArrayToFile();
+                Console.WriteLine("Введите целое трехзначное число");
+                string input = Console.ReadLine();
+
+                input = input.Trim('-');
 
 
-                //ShiftArray();
-
-                //FormatString();
-                //ArrayString();
-                //ComparisonString();
-                //StringIndexO();
-                //StringIndexY();
-                //StringInsert();
-                //StringReplace();
-                //StringDelete();
-                //StringRegister();
-                //StringSplit();
-            }
-
-            static void Task1()
-            {
-
-                while (true)
+                if (input.Length != 3 || !Utilities.CheckNumber(input, out int i))
                 {
+                    continue;
+                }
+                Console.WriteLine($"Сумма цифр равна: {SumOfDigits(i)}");
+                break;
+            }
+        }
 
-                    Console.WriteLine("Введите целое трехзначное число");
-                    string input = Console.ReadLine();
+        static int SumOfDigits(int n)
+        {
+            var sum = 0;
+            while (n != 0)
+            {
+                sum += n % 10;
+                n /= 10;
+            }
+            return sum;
+        }
 
-                    input = input.Trim('-');
+        static void Task2()
+        {
+            int max_sum = 0;
+            int max_num = 0;
+            int num;
+            Console.WriteLine("Введите целые числа");
+            do
+            {
+                string input = Console.ReadLine();
+                input = input.Trim('-');
+                Utilities.CheckNumber(input, out num);
 
-
-                    if (input.Length != 3 || !Utilities.CheckNumber(input, out int i))
+                var sum = SumOfDigits(num);
+                if (sum > max_sum)
+                {
+                    max_sum = sum;
+                    max_num = num;
+                }
+            }
+            while (num != 0);
+            Console.WriteLine("Число с максимальной суммой цифр = " + max_num);
+            Console.WriteLine("Сумма цифр = " + max_sum);
+        }
+        static void Task3()
+        {
+            int sum_odd = 0;
+            int e = 0;
+            Console.WriteLine("Введите количество чисел");
+            while (true)
+            {
+                string input = Console.ReadLine();
+                Utilities.CheckNumber(input, out int n);
+                if (n > 0)
+                {
+                    for (int i = 0; i < n; i++)
                     {
-                        continue;
+                        Console.WriteLine("Введите число {0}:", i + 1);
+                        Utilities.CheckNumber(Console.ReadLine(), out int num);
+
+                        if (num % 2 != 0)
+                        {
+                            e++;
+                            sum_odd += num;
+                        }
+                        if (e > 2) break;
+
                     }
-                    Console.WriteLine($"Сумма цифр равна: {SumOfDigits(i)}");
+                    Console.WriteLine("Сумма первых трех нечетных чисел: {0}", sum_odd);
                     break;
                 }
+                else Console.WriteLine("Введите положительное целое число");
+
             }
 
-            static int SumOfDigits(int n)
-            {
-                var sum = 0;
-                while (n != 0)
-                {
-                    sum += n % 10;
-                    n /= 10;
-                }
-                return sum;
-            }
 
-            static void Task2()
-            {
-                int max_sum = 0;
-                int max_num = 0;
-                int num;
-                Console.WriteLine("Введите целые числа");
-                do
-                {
-                    string input = Console.ReadLine();
-                    input = input.Trim('-');
-                    Utilities.CheckNumber(input, out num);
 
-                    var sum = SumOfDigits(num);
-                    if (sum > max_sum)
+        }
+
+        static void Task4()
+        {
+            int n1 = 0;
+            int n2 = 0;
+            int n3 = 0;
+
+            Console.WriteLine("Введите количество чисел");
+            while (true)
+            {
+                string input = Console.ReadLine();
+                Utilities.CheckNumber(input, out int n);
+                if (n > 0)
+                {
+                    for (int i = 0; i < n; i++)
                     {
-                        max_sum = sum;
-                        max_num = num;
-                    }
-                }
-                while (num != 0);
-                Console.WriteLine("Число с максимальной суммой цифр = " + max_num);
-                Console.WriteLine("Сумма цифр = " + max_sum);
-            }
-            static void Task3()
-            {
-                int sum_odd = 0;
-                int e = 0;
-                Console.WriteLine("Введите количество чисел");
-                while (true)
-                {
-                    string input = Console.ReadLine();
-                    Utilities.CheckNumber(input, out int n);
-                    if (n > 0)
-                    {
-                        for (int i = 0; i < n; i++)
+                        Console.WriteLine("Введите число {0}:", i + 1);
+                        Utilities.CheckNumber(Console.ReadLine(), out int num);
+                        if (num % 2 != 0)
                         {
-                            Console.WriteLine("Введите число {0}:", i + 1);
-                            Utilities.CheckNumber(Console.ReadLine(), out int num);
-
-                            if (num % 2 != 0)
-                            {
-                                e++;
-                                sum_odd += num;
-                            }
-                            if (e > 2) break;
-
+                            n1 = n2;
+                            n2 = n3;
+                            n3 = num;
                         }
-                        Console.WriteLine("Сумма первых трех нечетных чисел: {0}", sum_odd);
-                        break;
                     }
-                    else Console.WriteLine("Введите положительное целое число");
-
+                    Console.WriteLine("Sum of the last three odd numbers: {0}", (n1 + n2 + n3));
+                    break;
                 }
-
-
+                else Console.WriteLine("Введите положительное целое число");
 
             }
-
-            static void Task4()
+        }
+        static void Rectangle()
+        {
+            Console.WriteLine("Введите 'n' в промежутке [1;20]");
+            while (true)
             {
-                int n1 = 0;
-                int n2 = 0;
-                int n3 = 0;
-
-                Console.WriteLine("Введите количество чисел");
-                while (true)
+                if (Utilities.CheckNumber(Console.ReadLine(), out int n) == true)
                 {
-                    string input = Console.ReadLine();
-                    Utilities.CheckNumber(input, out int n);
-                    if (n > 0)
+                    if (Utilities.CheckRange(n) == true)
                     {
-                        for (int i = 0; i < n; i++)
+                        Console.WriteLine("Введите 'm' в промежутке [1;20]");
+                        if (Utilities.CheckNumber(Console.ReadLine(), out int m) == true)
                         {
-                            Console.WriteLine("Введите число {0}:", i + 1);
-                            Utilities.CheckNumber(Console.ReadLine(), out int num);
-                            if (num % 2 != 0)
+                            if (Utilities.CheckRange(m) == true)
                             {
-                                n1 = n2;
-                                n2 = n3;
-                                n3 = num;
-                            }
-                        }
-                        Console.WriteLine("Sum of the last three odd numbers: {0}", (n1 + n2 + n3));
-                        break;
-                    }
-                    else Console.WriteLine("Введите положительное целое число");
-
-                }
-            }
-            static void Rectangle()
-            {
-                Console.WriteLine("Введите 'n' в промежутке [1;20]");
-                while (true)
-                {
-                    if (Utilities.CheckNumber(Console.ReadLine(), out int n) == true)
-                    {
-                        if (Utilities.CheckRange(n) == true)
-                        {
-                            Console.WriteLine("Введите 'm' в промежутке [1;20]");
-                            if (Utilities.CheckNumber(Console.ReadLine(), out int m) == true)
-                            {
-                                if (Utilities.CheckRange(m) == true)
+                                for (int i = 1; i <= n; i++)
                                 {
-                                    for (int i = 1; i <= n; i++)
+                                    for (int k = 1; k < m; k++)
                                     {
-                                        for (int k = 1; k < m; k++)
-                                        {
-                                            Console.Write("*");
-                                        }
-                                        Console.WriteLine("*");
+                                        Console.Write("*");
                                     }
-                                    break;
+                                    Console.WriteLine("*");
                                 }
+                                break;
                             }
                         }
                     }
                 }
             }
-            static void Threeangle_1()
+        }
+        static void Threeangle_1()
+        {
+            Console.WriteLine("Введите 'm' в промежутке [1;20]");
+            while (true)
             {
-                Console.WriteLine("Введите 'm' в промежутке [1;20]");
-                while (true)
+                if (Utilities.CheckNumber(Console.ReadLine(), out int m) == true)
                 {
-                    if (Utilities.CheckNumber(Console.ReadLine(), out int m) == true)
+                    if (Utilities.CheckRange(m) == true)
                     {
-                        if (Utilities.CheckRange(m) == true)
+                        int i1 = 0, i2 = 0;
+                        for (int a = 0; a < m; a++)
                         {
-                            int i1 = 0, i2 = 0;
-                            for (int a = 0; a < m; a++)
-                            {
-                                for (int b = 0; b < m; b++)
-                                {
-                                    if (b == i1 || b == i2) Console.Write("*");
-                                    else Console.Write(" ");
-                                }
-                                Console.Write("\n");
-                                i2++;
-                            }
                             for (int b = 0; b < m; b++)
+                            {
+                                if (b == i1 || b == i2) Console.Write("*");
+                                else Console.Write(" ");
+                            }
+                            Console.Write("\n");
+                            i2++;
+                        }
+                        for (int b = 0; b < m; b++)
+                        {
+                            Console.Write("*");
+                        }
+                        break;
+                    }
+
+                }
+            }
+        }
+        static void Threeangle_2()
+        {
+            Console.WriteLine("Введите 'm' в промежутке [1;20]");
+            while (true)
+            {
+                if (Utilities.CheckNumber(Console.ReadLine(), out int m) == true)
+                {
+                    if (Utilities.CheckRange(m) == true)
+                    {
+                        for (int i = 1; i <= m; i++)
+                        {
+                            int j = 2 * i - 1;
+                            for (int a = 1; a <= j; a++)
                             {
                                 Console.Write("*");
                             }
-                            break;
+                            Console.WriteLine();
                         }
-                      
+                        break;
                     }
                 }
             }
-            static void Threeangle_2()
+
+        }
+        static void Rhombus()
+        {
+            Console.WriteLine("Введите 'n' в промежутке [1;20]");
+            while (true)
             {
-                Console.WriteLine("Введите 'm' в промежутке [1;20]");
-                while (true)
+                if (Utilities.CheckNumber(Console.ReadLine(), out int n) == true)
                 {
-                    if (Utilities.CheckNumber(Console.ReadLine(), out int m) == true)
+                    if (Utilities.CheckRange(n) == true)
                     {
-                        if (Utilities.CheckRange(m) == true)
+                        for (int i = 1; i < 2 * n; i++)
                         {
-                            for (int i = 1; i <= m; i++)
+                            for (int j = 1; j < 2 * n; j++)
                             {
-                                int j = 2 * i - 1;
-                                for (int a = 1; a <= j; a++)
+                                if (i <= n && i + j == n + 1)
                                 {
-                                    Console.Write("*");
+                                    for (int l = 1; l <= i; l++)
+                                    {
+                                        Console.Write("* ");
+                                    }
                                 }
-                                Console.WriteLine();
+                                else if (i > n && i - j == n - 1)
+                                {
+                                    for (int s = 1; s <= 2 * n - i; s++)
+                                    {
+                                        Console.Write("* ");
+                                    }
+                                }
+                                else
+                                {
+                                    Console.Write(" ");
+                                }
                             }
-                            //for (int i = 1; i <= m; i++)
-                            //{
-                            //    for (int k = i + 1; k <= m; k++)
-                            //    {
-                            //        Console.Write("*");
-                            //    }
-                            //    Console.WriteLine("*");
-                            //}
-                            break;
+                            Console.WriteLine();
                         }
-                    }
-                }
-
-            }
-            static void Rhombus()
-            {
-                Console.WriteLine("Введите 'n' в промежутке [1;20]");
-                while (true)
-                {
-                    if (Utilities.CheckNumber(Console.ReadLine(), out int n) == true)
-                    {
-                        if (Utilities.CheckRange(n) == true)
-                        {
-                            for (int i = 1; i < 2 * n; i++)
-                            {
-                                for (int j = 1; j < 2 * n; j++)
-                                {                                   
-                                    if (i <= n && i + j == n + 1)
-                                    {
-                                        for (int l = 1; l <= i; l++)
-                                        {
-                                            Console.Write("* ");
-                                        }
-                                    }
-                                    else if (i > n && i - j == n - 1)
-                                    {
-                                        for (int s = 1; s <= 2 * n - i; s++)
-                                        {
-                                            Console.Write("* ");
-                                        }
-                                    }
-                                    else
-                                    {
-                                        Console.Write(" ");
-                                    }
-                                }                                
-                                Console.WriteLine();
-                            }
-                            break;
-                        }                        
+                        break;
                     }
                 }
             }
+        }
 
-            
-            static void Task6()
+
+        static void Task6()
+        {
+            int sum_a = 0;
+            for (int i = 0; i <= 50; i++)
             {
-                int sum_a = 0;
-                for (int i = 0; i <= 50; i++)
-                {
-                    sum_a += i;
-                }
-                Console.WriteLine(sum_a);
-
-                int sum_b = 2;
-                for (int i = 0; i <= 50; i += 2)
-                {
-                    sum_b += i;
-                }
-                Console.WriteLine(sum_b);
-
-                int sum_с = 1;
-                for (int i = 0; i <= 50; i += 2)
-                {
-                    sum_с += i;
-                }
-                Console.WriteLine(sum_с);
-
-
+                sum_a += i;
             }
+            Console.WriteLine(sum_a);
 
-            static void Task7()
+            int sum_b = 2;
+            for (int i = 0; i <= 50; i += 2)
             {
-                int sum = 6;
-                int s = 0;
-                for (int i = 4; i <= 46; i += 4)
-                {
-                    sum += i;
-                    s++;
-                }
-                Console.WriteLine(sum);
-                Console.WriteLine(s);
+                sum_b += i;
             }
-            static void Task8()
+            Console.WriteLine(sum_b);
+
+            int sum_с = 1;
+            for (int i = 0; i <= 50; i += 2)
             {
-                int a = 6;
-                int sumOfTenTerm = 6;
+                sum_с += i;
+            }
+            Console.WriteLine(sum_с);
+
+
+        }
+
+        static void Task7()
+        {
+            int sum = 6;
+            int s = 0;
+            for (int i = 4; i <= 46; i += 4)
+            {
+                sum += i;
+                s++;
+            }
+            Console.WriteLine(sum);
+            Console.WriteLine(s);
+        }
+        static void Task8()
+        {
+            int a = 6;
+            int sumOfTenTerm = 6;
+            Console.WriteLine(a);
+            for (int i = 1; i < 10; i++)
+            {
+                a += 4;
+                sumOfTenTerm += a;
+
                 Console.WriteLine(a);
-                for (int i = 1; i < 10; i++)
-                {
-                    a += 4;
-                    sumOfTenTerm += a;
-
-                    Console.WriteLine(a);
-                }
-                Console.WriteLine("Sum of the numbers = " + sumOfTenTerm);
             }
-            static void Task9()
+            Console.WriteLine("Sum of the numbers = " + sumOfTenTerm);
+        }
+        static void Task9()
+        {
+            int b = 1;
+            int sumOfElevenTerms = 1;
+            Console.WriteLine(b);
+            for (int i = 1; i < 11; i++)
             {
-                int b = 1;
-                int sumOfElevenTerms = 1;
+                b *= 2;
+                sumOfElevenTerms += b;
                 Console.WriteLine(b);
-                for (int i = 1; i < 11; i++)
-                {
-                    b = (b * 2);
-                    sumOfElevenTerms += b;
-                    Console.WriteLine(b);
-                }
-                Console.WriteLine("Sum of the numbers = " + sumOfElevenTerms);
             }
-            static void Task10()
+            Console.WriteLine("Sum of the numbers = " + sumOfElevenTerms);
+        }
+        static void Task10()
+        {
+            int x = 6;
+            int sumMoreThan100 = 6;
+            int number_1 = 0;
+            Console.WriteLine(x);
+            for (int i = 1; i < 10; i++)
             {
-                int x = 6;
-                int sumMoreThan100 = 6;
-                int number_1 = 0;
+                x += 4;
+                sumMoreThan100 += x;
                 Console.WriteLine(x);
-                for (int i = 1; i < 10; i++)
-                {
-                    x += 4;
-                    sumMoreThan100 += x;
-                    Console.WriteLine(x);
-                    if (sumMoreThan100 > 100)
-                        break;
-                    number_1 = i + 1;
-                }
-                Console.WriteLine("Количество слагаемых = " + number_1);
-                Console.Write("Сумма = " + sumMoreThan100);
+                if (sumMoreThan100 > 100)
+                    break;
+                number_1 = i + 1;
             }
-            static void Task11()
+            Console.WriteLine("Количество слагаемых = " + number_1);
+            Console.Write("Сумма = " + sumMoreThan100);
+        }
+        static void Task11()
+        {
+            int y = 6;
+            int sumLessThan100 = 6;
+            int number_2 = 0;
+            Console.WriteLine(y);
+            for (int i = 1; i < 10; i++)
             {
-                int y = 6;
-                int sumLessThan100 = 6;
-                int number_2 = 0;
+                y += 4;
+                sumLessThan100 += y;
                 Console.WriteLine(y);
-                for (int i = 1; i < 10; i++)
+                number_2 = i + 1;
+                if (sumLessThan100 > 100)
                 {
-                    y += 4;
-                    sumLessThan100 += y;
-                    Console.WriteLine(y);
-                    number_2 = i + 1;
-                    if (sumLessThan100 > 100)
-                    {
-                        sumLessThan100 -= y;
-                        number_2 -= 1;
-                        break;
-                    }
+                    sumLessThan100 -= y;
+                    number_2 -= 1;
+                    break;
                 }
-                Console.WriteLine("Количество слагаемых = " + number_2);
-                Console.Write("Сумма = " + sumLessThan100);
             }
-            static void Task12()
+            Console.WriteLine("Количество слагаемых = " + number_2);
+            Console.Write("Сумма = " + sumLessThan100);
+        }
+        static void Task12()
+        {
+            Console.WriteLine("Введите количество чисел Фиббоначи");
+            while (true)
             {
-                Console.WriteLine("Введите количество чисел Фиббоначи");
-                while (true)
+                Utilities.CheckNumber(Console.ReadLine(), out int numFibbonacci);
+                if (numFibbonacci > 0)
                 {
-                    Utilities.CheckNumber(Console.ReadLine(), out int numFibbonacci);
-                    if (numFibbonacci > 0)
-                    {
-                        int sum = FibonacciSum(numFibbonacci);
-                        Console.WriteLine("Сумма первых " + numFibbonacci + " чисел Фиббоначи = " + sum);
-                        break;
-                    }
-                    Console.WriteLine("Введите положительное число");
+                    int sum = FibonacciSum(numFibbonacci);
+                    Console.WriteLine("Сумма первых " + numFibbonacci + " чисел Фиббоначи = " + sum);
+                    break;
                 }
+                Console.WriteLine("Введите положительное число");
             }
-            public static int FibonacciSum(int n)
+        }
+        public static int FibonacciSum(int n)
+        {
+
+            int[] fibo = new int[n + 1];
+            fibo[0] = 0; fibo[1] = 1;
+
+            int sum = fibo[0] + fibo[1];
+
+            for (int i = 2; i <= n; i++)
             {
-
-                int[] fibo = new int[n + 1];
-                fibo[0] = 0; fibo[1] = 1;
-
-                int sum = fibo[0] + fibo[1];
-
-                for (int i = 2; i <= n; i++)
-                {
-                    fibo[i] = fibo[i - 1] + fibo[i - 2];
-                    sum += fibo[i];
-                }
-                return sum;
-
+                fibo[i] = fibo[i - 1] + fibo[i - 2];
+                sum += fibo[i];
             }
-            static void MaxNumberFromArray()
+            return sum;
+
+        }
+        static void MaxNumberFromArray()
+        {
+            Console.WriteLine("Введите количество чисел");
+            int[] array = Utilities.ArrayInput();
+            Utilities.ArrayPrint(array);
+            Array.Sort(array);
+            Array.Reverse(array);
+            int count = 0;
+            int index = -1;
+            for (int i = 0; i < array.Length; i++)
             {
-                Console.WriteLine("Введите количество чисел");
-                int[] array = Utilities.ArrayInput();
-                Utilities.ArrayPrint(array);
-                Array.Sort(array);
-                Array.Reverse(array);
-                int count = 0;
-                int index = -1;
-                for (int i = 0; i < array.Length; i++)
-                {
-                    var k = 1;
-                    for (var j = i + 1; j < array.Length; j++)
-                        if (array[i] == array[j]) k++;
-                    if (k <= count) continue;
-                    count = k;
-                    index = i;
-                }
-                Console.WriteLine("Чаще всего встречается число {0}. Повторилось {1} раз(а)", array[index], count);
+                var k = 1;
+                for (var j = i + 1; j < array.Length; j++)
+                    if (array[i] == array[j]) k++;
+                if (k <= count) continue;
+                count = k;
+                index = i;
             }
+            Console.WriteLine("Чаще всего встречается число {0}. Повторилось {1} раз(а)", array[index], count);
         }
         static void ValidationSortArray()
         {
@@ -525,56 +517,80 @@ namespace Trainig
         static void ElementsOfArray()
         {
             Console.Write("Введите количество чисел ");
-            int[] array = Utilities.ArrayInput();
-            Utilities.ArrayPrint(array);
-
-            Console.Write("Min = ");
-            Console.WriteLine(array.Min());
-            Console.Write("Max = ");
-            Console.WriteLine(array.Max());
-
-
-            var odd = array[0];
-            for (int i = 1; i < array.Length; i++)
+            while (true)
             {
-                if (array[i] % 2 != 0)
+                Utilities.CheckNumber(Console.ReadLine(), out int n);
+                if (n > 0)
                 {
-                    if (array[i] < odd)
-                        odd = array[i];
-                }
-                else continue;
-            }
+                    int[] array = new int[n];
+                    Console.WriteLine("Вводите числа в промежутке от [-100;100]");
 
-            Console.Write("Min odd = ");
-            Console.WriteLine(odd);
-            var even = array[0];
-            for (int k = 1; k < array.Length; k++)
-            {
-                if (array[k] % 2 == 0)
+                    for (int i = 0; i < n; i++)
+                    {
+                        if (Utilities.CheckNumber(Console.ReadLine(), out array[i]) != true || array[i] < -100 || array[i] > 100)
+                        {
+                            Console.WriteLine("Введите число в промежутке от [-100;100]");
+                            i -= 1;
+                        }
+                    }
+                    Utilities.ArrayPrint(array);
+                    Console.WriteLine("Минимальный элемент = " + array.Min());
+                    Console.WriteLine("Максимальный элемент = " + array.Max());
+                    var odd = array[0];
+                    for (int i = 1; i < array.Length; i++)
+                    {
+                        if (array[i] % 2 != 0)
+                        {
+                            if (array[i] < odd)
+                                odd = array[i];
+                        }
+                        else continue;
+                    }
+                    Console.WriteLine("Минимальный четный элемент = " + odd);
+                    var even = array[0];
+                    for (int k = 1; k < array.Length; k++)
+                    {
+                        if (array[k] % 2 == 0)
+                        {
+                            if (array[k] < even)
+                                even = array[k];
+                        }
+                        else continue;
+                    }
+                    Console.WriteLine("Минимальный нечетный элемент = " + even);
+                    int max = array[0];
+                    int min = array[0];
+                    int numbermin = 0;
+                    int numbermax = 0;
+                    for (int i = 1; i < array.Length; i++)
+                    {
+                        if (max < array[i])
+                        {
+                            max = array[i];
+                            numbermax = i;
+                        }
+                        if (min > array[i])
+                        {
+                            min = array[i];
+                            numbermin = i;
+                        }
+                    }
+                    Console.WriteLine("Максимальный элемент:" + max + ".Индекс:" + (numbermax + 1));
+                    Console.WriteLine("Минимальный элемент:" + min + ".Индекс:" + (numbermin + 1));
+                    int a, b;
+                    a = array[numbermax];
+                    b = array[numbermin];
+                    array[numbermax] = b;
+                    array[numbermin] = a;
+                    Console.WriteLine("Полученный массив:");
+                    Utilities.ArrayPrint(array);
+                    break;
+                }
+                else
                 {
-                    if (array[k] < even)
-                        even = array[k];
+                    Console.WriteLine("Введите положительное число.");
                 }
-                else continue;
             }
-
-            Console.Write("Min even = ");
-            Console.WriteLine(even);
-
-            int a = array.Min();
-            int b = array.Max();
-            int c;
-
-            c = a;
-            a = b;
-            b = c;
-
-            Console.Write("New_Min = ");
-            Console.WriteLine(b);
-
-
-            Console.Write("New_Max = ");
-            Console.WriteLine(a);
         }
         static void MergeTwoArray()
         {
@@ -751,13 +767,13 @@ namespace Trainig
         //}
         static void ArrayString()
         {
-            
+
             string s1 = "apple";
             string s2 = "banana";
             string s3 = "orange";
             string s4 = "kiwi";
             string s5 = "mango";
-            string[] values = new string[] { s1, s2, s3, s4, s5 };      
+            string[] values = new string[] { s1, s2, s3, s4, s5 };
 
             Console.WriteLine(String.Join(" ", values));
             Console.WriteLine(String.Join("\n", values));
@@ -959,7 +975,6 @@ namespace Trainig
         //    }
         //}
     }
-
 }
 
 
