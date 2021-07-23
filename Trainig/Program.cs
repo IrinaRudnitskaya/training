@@ -9,15 +9,12 @@ namespace Trainig
     {
         internal static bool CheckNumber(string input, out int number)
         {
-            while (true)
+            if (int.TryParse(input, out number))
             {
-                if (int.TryParse(input, out number))
-                {
-                    return true;
-                }
-                Console.WriteLine("Это не целое число. Попробуйте еще раз.");
-                return false;
+                return true;
             }
+            else Console.WriteLine("Это не целое число. Попробуйте еще раз.");
+            return false;
         }
         public static bool CheckRange(int number)
         {
@@ -83,7 +80,7 @@ namespace Trainig
             //MaxNumberFromArray();
             //ValidationSortArray();                
             //ElementsOfArray();
-            //MergeTwoArray();                
+            //MergeTwoArray();
             //SortArrayToFile();
             //SortReserveArrayToFile();
 
@@ -133,27 +130,25 @@ namespace Trainig
             }
             return sum;
         }
-
         static void Task2()
         {
             int max_sum = 0;
             int max_num = 0;
-            int num;
-            Console.WriteLine("Введите целые числа");
+            string input;
+            Console.WriteLine("Вводите целые числа. Чтобы закончить ввод и посмотреть результат, введите 0.");
             do
             {
-                string input = Console.ReadLine();
-                input = input.Trim('-');
-                Utilities.CheckNumber(input, out num);
-
-                var sum = SumOfDigits(num);
-                if (sum > max_sum)
+                input = Console.ReadLine().Trim('-');
+                if (Utilities.CheckNumber(input, out int num) == true)
                 {
-                    max_sum = sum;
-                    max_num = num;
+                    var sum = SumOfDigits(num);
+                    if (sum > max_sum)
+                    {
+                        max_sum = sum;
+                        max_num = num;
+                    }
                 }
-            }
-            while (num != 0);
+            } while (input != "0");
             Console.WriteLine("Число с максимальной суммой цифр = " + max_num);
             Console.WriteLine("Сумма цифр = " + max_sum);
         }
@@ -170,8 +165,11 @@ namespace Trainig
                 {
                     for (int i = 0; i < n; i++)
                     {
-                        Console.WriteLine("Введите число {0}:", i + 1);
-                        Utilities.CheckNumber(Console.ReadLine(), out int num);
+                        Console.WriteLine("Введите число:");
+                        if (Utilities.CheckNumber(Console.ReadLine(), out int num) != true)
+                        {
+                            i -= 1;
+                        }
 
                         if (num % 2 != 0)
                         {
@@ -181,7 +179,12 @@ namespace Trainig
                         if (e > 2) break;
 
                     }
-                    Console.WriteLine("Сумма первых трех нечетных чисел: {0}", sum_odd);
+                    if (sum_odd == 0)
+                    {
+                        Console.WriteLine("В списке нет нечетных чисел");
+                    }
+                    else
+                        Console.WriteLine("Сумма первых трех нечетных чисел: {0}", sum_odd);
                     break;
                 }
                 else Console.WriteLine("Введите положительное целое число");
@@ -191,7 +194,6 @@ namespace Trainig
 
 
         }
-
         static void Task4()
         {
             int n1 = 0;
@@ -207,8 +209,11 @@ namespace Trainig
                 {
                     for (int i = 0; i < n; i++)
                     {
-                        Console.WriteLine("Введите число {0}:", i + 1);
-                        Utilities.CheckNumber(Console.ReadLine(), out int num);
+                        Console.WriteLine("Введите число:");
+                        if (Utilities.CheckNumber(Console.ReadLine(), out int num) != true)
+                        {
+                            i -= 1;
+                        }
                         if (num % 2 != 0)
                         {
                             n1 = n2;
@@ -216,7 +221,12 @@ namespace Trainig
                             n3 = num;
                         }
                     }
-                    Console.WriteLine("Sum of the last three odd numbers: {0}", (n1 + n2 + n3));
+                    if ((n1 + n2 + n3) == 0)
+                    {
+                        Console.WriteLine("В списке нет нечетных чисел");
+                    }
+                    else
+                        Console.WriteLine("Sum of the last three odd numbers: {0}", (n1 + n2 + n3));
                     break;
                 }
                 else Console.WriteLine("Введите положительное целое число");
@@ -261,20 +271,14 @@ namespace Trainig
                 {
                     if (Utilities.CheckRange(m) == true)
                     {
-                        int i1 = 0, i2 = 0;
-                        for (int a = 0; a < m; a++)
+                        for (int i = 1; i <= m; i++)
                         {
-                            for (int b = 0; b < m; b++)
+                            int j = 2 * i - 1;
+                            for (int a = 1; a <= j; a++)
                             {
-                                if (b == i1 || b == i2) Console.Write("*");
-                                else Console.Write(" ");
+                                Console.Write("*");
                             }
-                            Console.Write("\n");
-                            i2++;
-                        }
-                        for (int b = 0; b < m; b++)
-                        {
-                            Console.Write("*");
+                            Console.WriteLine();
                         }
                         break;
                     }
@@ -293,12 +297,12 @@ namespace Trainig
                     {
                         for (int i = 1; i <= m; i++)
                         {
-                            int j = 2 * i - 1;
-                            for (int a = 1; a <= j; a++)
+
+                            for (int k = i + 1; k <= m; k++)
                             {
                                 Console.Write("*");
                             }
-                            Console.WriteLine();
+                            Console.WriteLine("*");
                         }
                         break;
                     }
@@ -594,34 +598,71 @@ namespace Trainig
         }
         static void MergeTwoArray()
         {
-            Console.Write("Введите количество чисел для массива 1 ");
-            int[] array_1 = Utilities.ArrayInput();
-            Array.Sort(array_1);
+            Console.WriteLine("Введите количество чисел для массива 1 ");
+            Utilities.CheckNumber(Console.ReadLine(), out int NumForArray1);
+            int[] array_1 = new int[NumForArray1];
+            Utilities.CheckNumber(Console.ReadLine(), out int NumForArray2);
+            int[] array_2 = new int[NumForArray2];            
+            while (true)
+            {         
+                if (NumForArray1 > 0)
+                {                    
+                    Console.WriteLine("Вводите целые числа в порядке возрастания");
 
-            Console.Write("Введите количество чисел для массива 2 ");
-            int[] array_2 = Utilities.ArrayInput();
-            Array.Sort(array_2);
+                    if (Utilities.CheckNumber(Console.ReadLine(), out array_1[0]) == true)
+                    {
+                        for (int i = 1; i < NumForArray1; i++)
+                        {
+                            if (Utilities.CheckNumber(Console.ReadLine(), out array_1[i]) != true || array_1[i] < array_1[i - 1])
+                            {
+                                Console.WriteLine("Каждое последующее число должно быть больше предыдущего.");
+                                i -= 1;
+                            }
+                        }
+                    }
+                    Utilities.ArrayPrint(array_1);
+                    Console.WriteLine("Введите количество чисел для массива 2 ");                    
+                    if (NumForArray2 > 0)
+                    {                       
+                        Console.WriteLine("Вводите целые числа в порядке возрастания");
 
-            Console.Write("Array_1: ");
-            Utilities.ArrayPrint(array_1);
-            Console.Write("Array_2: ");
-            Utilities.ArrayPrint(array_2);
+                        if (Utilities.CheckNumber(Console.ReadLine(), out array_2[0]) == true)
+                        {
+                            for (int i = 1; i < NumForArray2; i++)
+                            {
+                                if (Utilities.CheckNumber(Console.ReadLine(), out array_2[i]) != true || array_2[i] < array_2[i - 1])
+                                {
+                                    Console.WriteLine("Каждое последующее число должно быть больше предыдущего.");
+                                    i -= 1;
+                                }
+                            }
+                        }
+                        Utilities.ArrayPrint(array_2);
+                        var array_3 = new int[array_1.Length + array_2.Length];
+                        int n = 0;
+                        int m = 0;
+                        int k = 0;
 
-            var array_3 = new int[array_1.Length + array_2.Length];
-            int n = 0;
-            int m = 0;
-            int k = 0;
-
-            while (n < array_1.Length && m < array_2.Length)
-                array_3[k++] = array_1[n] < array_2[m] ? array_1[n++] : array_2[m++];
-            while (n < array_1.Length)
-                array_3[k++] = array_1[n++];
-            while (m < array_2.Length)
-                array_3[k++] = array_2[m++];
-
-
-            Console.Write("Array_3: ");
-            Utilities.ArrayPrint(array_3);
+                        while (n < array_1.Length && m < array_2.Length)
+                            array_3[k++] = array_1[n] < array_2[m] ? array_1[n++] : array_2[m++];
+                        while (n < array_1.Length)
+                            array_3[k++] = array_1[n++];
+                        while (m < array_2.Length)
+                            array_3[k++] = array_2[m++];
+                        Console.Write("Array_3: ");
+                        Utilities.ArrayPrint(array_3);
+                        break;
+                    }
+                    else
+                    {
+                        Console.WriteLine("Введите положительное число");
+                    }
+                }
+                else
+                {
+                    Console.WriteLine("Введите положительное число");
+                }
+            }
         }
         static void SortArrayToFile()
         {
